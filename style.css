@@ -9,7 +9,7 @@ body{
 .montserrat {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
-    font-weight: normal;
+    font-weight: 600;
     font-style: normal;
   }
 main{
@@ -65,15 +65,52 @@ article{
     flex-grow: 1;
     background-color: rgba(0, 0, 0, 0.4);
 }
-a{
-    color: #2916E0;
-    background-color: white;
-    text-decoration: none;
-    width: 10%;
-    height: 5vb;
-    line-height: 5;
-    padding: 0.5% 1%;
-    border-radius: 5px;
-    font-size: 0.9rem;
-    
+.imgs:hover~.img5 .img-org{
+    display: none;
+}
+.imgs:hover .img-org{
+    display: block;
+    transition-delay: 1s;
+    opacity: 1;
+    transform: translateY(10px);
+}
+.imgs{
+    a{
+        color: #2916E0;
+        background-color: white;
+        text-decoration: none;
+        width: 10%;
+        padding: 0.5% 2%;
+        border-radius: 2px;
+        font-size: 0.9rem;
+        pointer-events: none;
+    }
+    h1{
+        color: white;
+        font-size: 4rem;
+    }
+    .img-org{
+        margin-top: 50%;
+        margin-left: 3%;
+        display: none;
+        transition: 1s;
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    .author{
+        display: flex;
+        align-content: center;
+        img{
+            display: inline-block;
+            border-radius: 50%;
+        }
+        h2{
+            display: inline-block;
+            color: white;
+            margin-left: 2%;
+        }
+    }
+}
+.img5 .img-org{
+    display: block;
 }
