@@ -1,0 +1,22 @@
+article{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    #div-img{
+        background-color: #2919E0;
+        padding: 0 15%;
+        #about-bg{
+            background-image: url(about-bg.png);
+            margin-top: 15%;
+            text-align: center;
+            width: 50%;
+            text-align: center;
+        }
+        img{
+            width: 100%;
+            height: auto;
+            border-radius: 50%;
+            z-index: 2;
+            padding: 10%;
+        }
+    }
+}

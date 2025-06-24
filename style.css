@@ -5,112 +5,117 @@
 }
 body{
     margin: 0;
+    overflow-x: hidden;
 }
 .montserrat {
     font-family: "Montserrat", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
-  }
+}
+.desativado{
+    pointer-events: none;
+}
+.azul{
+    color: #2916E0 !important;
+}
+a{
+    text-decoration: none;
+    color: #0f0f0f;
+}
 main{
     display: grid;
     width: 100vw;
     height: 100vb;
     grid-template-columns: 100px 1fr;
 }
+/* Menu */
 nav{
     height: 100vb;
-    background-color: red;
-}
-article{
-    display: flex;
-    height: 100vb;
-}
-.imgs{
-    flex-grow: 1;
-    background-size: cover;
-    background-color: rgba(0, 0, 0, 0.4);
-    background-position: 20% 0;
-    background-blend-mode: multiply;
-    transition: 0.4s;
-}
-.img1{
-    background-image: url(1.jpg.webp );
-    height: 100vb;
-}
-.img2{
-    background-image: url(2.jpg.webp );
-    height: 100vb;
-}
-.img3{
-    background-image: url(3.jpg.webp );
-    height: 100vb;
-}
-.img4{
-    background-image: url(4.jpg.webp );
-    height: 100vb;
-}
-.img5{
-    background-image: url(5.jpg.webp );
-    height: 100vb;
-    order: -1;
-    flex-grow: 6;
-    background-color: transparent;
-}
-.imgs:hover{
-    flex-grow: 6;
-    background-color: transparent;
-}
-.imgs:hover~.img5{
-    flex-grow: 1;
-    background-color: rgba(0, 0, 0, 0.4);
-}
-.imgs:hover~.img5 .img-org{
-    display: none;
-}
-.imgs:hover .img-org{
-    display: block;
-    transition-delay: 1s;
-    opacity: 1;
-    transform: translateY(10px);
-}
-.imgs{
-    a{
-        color: #2916E0;
-        background-color: white;
-        text-decoration: none;
-        width: 10%;
-        padding: 0.5% 2%;
-        border-radius: 2px;
-        font-size: 0.9rem;
-        pointer-events: none;
-    }
-    h1{
-        color: white;
-        font-size: 4rem;
-    }
-    .img-org{
-        margin-top: 50%;
-        margin-left: 3%;
-        display: none;
-        transition: 1s;
+    background-color: rgb(255, 255, 255);
+    position: relative;
+
+    #menu-check{
+        position: absolute;
+            left: 35%;
+            top: 2%;
+        width: 30%;
+        height: 5vb;
+        cursor: pointer;
         opacity: 0;
-        transform: translateY(-10px);
+        z-index: 2;
     }
-    .author{
-        display: flex;
-        align-content: center;
-        img{
-            display: inline-block;
-            border-radius: 50%;
-        }
-        h2{
-            display: inline-block;
+    #menu-check:checked~aside{
+        left: 0;
+    }
+    .menu{
+        height: 10%;
+        width: 100px;
+        background-color: #0f0f0f;
+        text-align: center;
+        i{
             color: white;
-            margin-left: 2%;
+            font-size: 2rem;
+            line-height: 270%;
+        }
+    }
+    ul{
+        text-align: center;
+        width: 100%;
+        margin-top: 250%;
+        li{
+            margin-bottom: 50%;
+            font-size: 1.3rem;
+        }
+    }
+    aside{
+        width: 15vw;
+        height: 100vb;
+        background-color: white;
+        position: absolute;
+            top: 0;
+            left: -300%;
+        transition: all 0.5s;
+        z-index: 1;
+        .aside-grid{
+            display: grid;
+            grid-template-columns: 100px 1fr;
+            div:first-child{
+                height: auto;
+            }
+            div:last-child{
+                background-color: #2916E0;
+                text-align: center;
+                img{
+                    margin-top: 17%;
+                }
+            }
+        }
+        ul{
+            margin-top: 90%;
+            li{
+                margin-bottom: 1%;
+                font-size: 2rem;
+                a{
+                    color: #b2b2b2 !important;
+                    transition: 0.5s;
+                }
+                a:hover{
+                    color: #2916E0 !important;
+                }
+            }
+        }
+        ul:last-child{
+            margin-top: 30%;
+            width: 100%;
+            
+            li{
+                display: inline-block;
+                font-size: 1.2rem;
+                width: 10%;
+                margin-right: 7%;
+            }
         }
     }
 }
-.img5 .img-org{
-    display: block;
-}
+

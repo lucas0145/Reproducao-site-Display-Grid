@@ -1,0 +1,95 @@
+/*Parte das imagens */
+article{
+    display: flex;
+    height: 100vb;
+
+    .imgs{
+        flex-grow: 1;
+        background-size: cover;
+        background-color: rgba(0, 0, 0, 0.4);
+        background-position: 20% 0;
+        background-blend-mode: multiply;
+        transition: 0.4s;
+    }
+    .img1{
+        background-image: url(1.jpg.webp );
+        height: 100vb;
+    }
+    .img2{
+        background-image: url(2.jpg.webp );
+        height: 100vb;
+    }
+    .img3{
+        background-image: url(3.jpg.webp );
+        height: 100vb;
+    }
+    .img4{
+        background-image: url(4.jpg.webp );
+        height: 100vb;
+    }
+    .img5{
+        background-image: url(5.jpg.webp );
+        height: 100vb;
+        order: -1;
+        flex-grow: 6;
+        background-color: transparent;
+    }
+    .imgs:hover{
+        flex-grow: 6;
+        background-color: transparent;
+    }
+    .imgs:hover~.img5{
+        flex-grow: 1;
+        background-color: rgba(0, 0, 0, 0.4);
+    }
+    .imgs:hover~.img5 .img-org{
+        display: none;
+    }
+    .imgs:hover .img-org{
+        display: block;
+        transition-delay: 1s;
+        opacity: 1;
+        transform: translateY(10px);
+    }
+    .imgs{
+        a{
+            color: #2916E0;
+            background-color: white;
+            text-decoration: none;
+            width: 10%;
+            padding: 0.5% 2%;
+            border-radius: 2px;
+            font-size: 0.9rem;
+            pointer-events: none;
+        }
+        h1{
+            color: white;
+            font-size: 4rem;
+        }
+        .img-org{
+            margin-top: 50%;
+            margin-left: 3%;
+            display: none;
+            transition: 1s;
+            opacity: 0;
+            transform: translateY(-10px);
+        }
+        .author{
+            display: flex;
+            align-content: center;
+            img{
+                display: inline-block;
+                border-radius: 50%;
+            }
+            h2{
+                display: inline-block;
+                color: white;
+                margin-left: 2%;
+            }
+        }
+    }
+    .img5 .img-org{
+        display: block;
+        opacity: 1;
+    }
+}
