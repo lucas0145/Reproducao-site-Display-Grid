@@ -1,3 +1,6 @@
+body{
+    height: 110vb;
+}
 article{
     display: grid;
     grid-template-columns: 0.9fr 1.1fr;
@@ -54,14 +57,14 @@ article{
     }
     #div-txt{
         #aboutTxt{
-            padding: 10% 0;
+            padding-top: 5%;
             margin: 0 15%;
 
             h2{
                 font-size: 2rem;
                 font-weight: 600 !important;
                 position: relative;
-                padding-bottom: 10%;
+                padding-bottom: 7%;
                 display: inline-block;
             }
             h2:after{
@@ -78,10 +81,47 @@ article{
                 font-weight: 400;
                 margin-bottom: 3%;
                 font-size: 16px;
+                line-height: 1.1;
             }
         }
         #skills{
-
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+            >div{
+                text-align: center;
+            }
+            .circulo{
+                border-radius: 50%;
+                background-color: #2919E0;
+                width: 100px;
+                height: 100px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            
+                div{
+                    background-color: white;
+                    width: 88px;
+                    height: 88px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+            }
+            .circulo:first-child{
+                background-image: conic-gradient(#2919E0 0deg 90%, #ebebeb 90% 360deg);
+            }
+            .circulo:nth-child(2){
+                background-image: conic-gradient(#2919E0 0deg 95%, #ebebeb 95% 360deg);
+            }
+            .circulo:nth-child(3){
+                background-image: conic-gradient(#2919E0 0deg 80%, #ebebeb 80% 360deg);
+            }
+            .circulo:last-child{
+                background-image: conic-gradient(#2919E0 0deg 85%, #ebebeb 85% 360deg);
+            }
         }
     }
 }
